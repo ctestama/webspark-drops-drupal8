@@ -1,4 +1,4 @@
-# Webspark 8 ![Build Status](https://travis-ci.org/jrounsav/webspark-drops-8.svg?branch=master)
+# Webspark 8 ![Build Status](https://travis-ci.org/ASU/webspark-drops-drupal8.svg?branch=master)
 
 CONTENTS OF THIS FILE
 ---------------------
@@ -16,14 +16,14 @@ CONTENTS OF THIS FILE
 INTRODUCTION
 ------------
 
- Welcome to Webspark 8! We are currently in the pre-development stage, but are
- uploading our initial commit, based off of Panopoly 8.x-2.0-alpha4 (and on).
+ Welcome to Webspark 8! We are currently planning and beginning basic
+ development, based off of Panopoly 8.x-dev (and on).
 
   * For a full description of the motivation behind Webspark, visit
     https://webspark.asu.edu.
 
   * To submit bug reports and feature suggestions, or to track changes:
-    https://github.com/mgilardi/webspark-drops-8
+    https://github.com/ASU/webspark-drops-drupal8
 
 
 
