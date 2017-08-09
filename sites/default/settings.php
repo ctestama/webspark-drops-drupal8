@@ -87,16 +87,6 @@
  * @endcode
  */
 $databases = array();
-$databases['default']['default'] = array (
-    'database' => 'w8',
-    'username' => 'root',
-    'password' => 'root',
-    'host' => 'localhost',
-    'port' => '3306',
-    'driver' => 'mysql',
-    'prefix' => '',
-    'collation' => 'utf8mb4_general_ci',
-  );
 
 /**
  * Customizing database settings.
@@ -255,6 +245,7 @@ $databases['default']['default'] = array (
  * @endcode
  */
 $config_directories = array();
+$config_directories['sync'] = 'sites/default/files/config_SagkaIf4Yp06p7O1VETDXOtgQQuHTPVT8tVla8CV5nlPjGUp8XbpIMrP6rerHKaZEO874PNY7Q/sync';
 
 /**
  * Settings:
@@ -276,7 +267,7 @@ $config_directories = array();
  *
  * @see install_select_profile()
  */
-# $settings['install_profile'] = '';
+$settings['install_profile'] = 'panopoly';
 
 /**
  * Salt for one-time login links, cancel links, form tokens, etc.
@@ -659,9 +650,9 @@ if ($settings['hash_salt']) {
  *
  * Remove the leading hash signs if you would like to alter this functionality.
  */
-# $config['system.performance']['fast_404']['exclude_paths'] = '/\/(?:styles)|(?:system\/files)\//';
-# $config['system.performance']['fast_404']['paths'] = '/\.(?:txt|png|gif|jpe?g|css|js|ico|swf|flv|cgi|bat|pl|dll|exe|asp)$/i';
-# $config['system.performance']['fast_404']['html'] = '<!DOCTYPE html><html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL "@path" was not found on this server.</p></body></html>';
+$config['system.performance']['fast_404']['exclude_paths'] = '/\/(?:styles)|(?:system\/files)\//';
+$config['system.performance']['fast_404']['paths'] = '/\.(?:txt|png|gif|jpe?g|css|js|ico|swf|flv|cgi|bat|pl|dll|exe|asp)$/i';
+$config['system.performance']['fast_404']['html'] = '<!DOCTYPE html><html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL "@path" was not found on this server.</p></body></html>';
 
 /**
  * Load services definition file.
@@ -724,18 +715,8 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  *
  * Keep this code block at the end of this file to take full effect.
  */
- if (file_exists(__DIR__ . '/settings.local.php')) {
-   include __DIR__ . '/settings.local.php';
- }
-$databases['default']['default'] = array (
-  'database' => 'w8',
-  'username' => 'root',
-  'password' => 'root',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['install_profile'] = 'panopoly';
-$config_directories['sync'] = 'sites/default/files/config_SagkaIf4Yp06p7O1VETDXOtgQQuHTPVT8tVla8CV5nlPjGUp8XbpIMrP6rerHKaZEO874PNY7Q/sync';
+if (!isset($_SERVER['PANTHEON_ENVIRONMENT']) && file_exists(__DIR__ . '/settings.local.php')) {
+ include __DIR__ . '/settings.local.php';
+}
+
+// @TODO need to add error reporting

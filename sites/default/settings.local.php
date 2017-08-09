@@ -14,6 +14,19 @@
  * at the bottom of 'sites/example.com/settings.php'.
  */
 
+if (!isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
+  $databases['default']['default'] = array (
+    'database' => 'webspark',
+    'username' => 'root',
+    'password' => 'root',
+    'host' => 'localhost',
+    'port' => '3306',
+    'driver' => 'mysql',
+    'prefix' => '',
+    'collation' => 'utf8mb4_general_ci',
+  );
+}
+
 /**
  * Assertions.
  *
