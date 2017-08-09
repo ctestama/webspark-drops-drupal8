@@ -286,7 +286,7 @@ $settings['install_profile'] = 'panopoly';
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'yicbn6SYyjMGFY_6Gal1i4TXihRw55EY5LmQYXOBBN7_2tOZxrA5LeaW2ug65I8GsL1LY_sW3A';
+$settings['hash_salt'] = '';
 
 /**
  * Deployment identifier.
