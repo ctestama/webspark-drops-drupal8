@@ -17,7 +17,7 @@ INTRODUCTION
 ------------
 
  Welcome to Webspark 8! We are currently planning and beginning basic
- development, based off of Panopoly 8.x-dev (and on).
+ development, based off of Panopoly 8.x-2.x-dev (and on).
 
   * For a full description of the motivation behind Webspark, visit
     https://webspark.asu.edu.
