@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Webspark Seven theme.
+
+webspark_seven.settings:
+  type: theme_settings
+  label: 'Webspark Seven settings'
