@@ -65,6 +65,8 @@ dependencies:
   - asu_brand
   - we_megamenu
 themes:
+  - bartik 
   - radix
   - innov8
+  - seven
   - webspark_seven
