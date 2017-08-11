@@ -267,7 +267,7 @@ $config_directories['sync'] = 'sites/default/files/config_SagkaIf4Yp06p7O1VETDXO
  *
  * @see install_select_profile()
  */
-$settings['install_profile'] = 'panopoly';
+$settings['install_profile'] = 'webspark';
 
 /**
  * Salt for one-time login links, cancel links, form tokens, etc.
