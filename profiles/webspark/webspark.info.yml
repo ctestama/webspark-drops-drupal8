@@ -2,8 +2,9 @@ name: Webspark
 type: profile
 description: 'Create a quick and easy, ASU Web Standards-compliant website.'
 core: 8.x
+version: 8.x-2.x-dev
 distribution:
-  name: Webspark
+  name: ASU Webspark
 dependencies:
   # Drupal Core
   - node
@@ -61,6 +62,6 @@ dependencies:
   #- apps
 themes:
   - bartik
-  seven
   - radix
-  - innov8
+  #- innov8
+  - seven
