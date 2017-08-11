@@ -16,6 +16,8 @@ function openasu_install() {
   include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
   standard_install();
 
+  // Install and set Webspark Seven as administration theme
+  \Drupal::service('theme_installer')->install(['webspark_seven']);
   \Drupal::configFactory()
     ->getEditable('system.theme')
     ->set('admin', 'webspark_seven')
