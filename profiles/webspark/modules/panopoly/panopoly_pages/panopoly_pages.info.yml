@@ -16,3 +16,8 @@ dependencies:
   - text
   - user
 package: Panopoly
+
+# Information added by drush on 2017-06-14
+version: '8.x-2.x-dev'
+project: 'panopoly_pages'
+datestamp: 1497472173

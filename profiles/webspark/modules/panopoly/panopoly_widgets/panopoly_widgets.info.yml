@@ -16,3 +16,8 @@ dependencies:
   - text
   - user
   - views
+
+# Information added by drush on 2017-02-22
+version: '8.x-2.x-dev'
+project: 'panopoly_widgets'
+datestamp: 1487780638

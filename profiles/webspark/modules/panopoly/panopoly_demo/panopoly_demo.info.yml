@@ -8,3 +8,8 @@ dependencies:
   - page_manager
   - panopoly_pages
   - panopoly_core
+
+# Information added by drush on 2016-05-28
+version: '8.x-2.x-dev'
+project: 'panopoly_demo'
+datestamp: 1464446779

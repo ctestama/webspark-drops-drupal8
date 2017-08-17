@@ -12,3 +12,8 @@ dependencies:
   - text
   - user
 package: Panopoly
+
+# Information added by drush on 2017-03-07
+version: '8.x-2.x-dev'
+project: 'panopoly_users'
+datestamp: 1488918155
