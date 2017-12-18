@@ -1,0 +1,22 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: colt
+ * Date: 9/15/17
+ * Time: 4:20 PM
+ */
+
+
+/**
+ * Implements hook_theme().
+ */
+function asu_superhero_theme() {
+  return [
+
+    // Theme functions in asu_superhero.field.inc.
+    'hero_formatter' => [
+      'variables' => ['item' => NULL, 'item_attributes' => NULL, 'url' => NULL, 'image_style' => NULL],
+      'file' => 'asu_superhero.field.inc',
+    ],
+  ];
+}
