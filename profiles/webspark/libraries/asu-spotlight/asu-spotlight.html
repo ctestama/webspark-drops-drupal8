@@ -1,0 +1,89 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../mp-slider/mp-slider.html">
+<link rel="import" href="asu-spotlight-styles.html">
+<link rel="import" href="asu-spotlight-item.html">
+
+<dom-module id="asu-spotlight">
+    <template>
+        <style include="asu-spotlight-styles"></style>
+        <div id="container">
+            <div id="slider" on-mouseover="_pauseAutoPlay" on-mouseout="_resumeAutoPlay">
+                <div id="pauseIcon">
+                    <svg height="150" viewBox="0 0 1792 1792" width="150" fill="{{pauseColor}}" stroke="white" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1664 192v1408q0 26-19 45t-45 19h-512q-26 0-45-19t-19-45v-1408q0-26 19-45t45-19h512q26 0 45 19t19 45zm-896 0v1408q0 26-19 45t-45 19h-512q-26 0-45-19t-19-45v-1408q0-26 19-45t45-19h512q26 0 45 19t19 45z"/>
+                    </svg>
+                </div>
+                <slot></slot>
+            </div>
+
+            <dom-if if="[[caption]]">
+                <template>
+                    <slot></slot>
+                </template>
+            </dom-if>
+
+            <dom-if if="[[controls]]">
+                <template>
+                    <div id="prev" data-img="prev" on-click="_prevSlide"></div>
+                    <div id="next" data-img="next" on-click="_nextSlide"></div>
+                </template>
+            </dom-if>
+
+            <dom-if if="[[bullets]]">
+                <template>
+                    <ul id="bullets">
+                        <dom-repeat items="[[_images]]">
+                            <template>
+                                <li on-mouseover="_showThumb">
+                                    <a class="bullet" data-index$="[[index]]" on-click="_updateSelected"></a>
+                                    <div class="thumbPreview">
+                                        <img src="[[_selectedThumb]]" alt="">
+                                    </div>
+                                </li>
+                            </template>
+                        </dom-repeat>
+                    </ul>
+                </template>
+            </dom-if>
+            <dom-if if="[[showThumbs]]">
+                <template>
+                    <div id="thumbs">
+                        <dom-repeat items="[[_thumbs]]">
+                            <template>
+                                <div class$="[[item.class]] thumb">
+                                    <img src="[[item.image]]"
+                                         data-index$="[[item.dataIndex]]"
+                                         on-click="_updateSelected" />
+                                </div>
+                            </template>
+                        </dom-repeat>
+                    </div>
+                </template>
+            </dom-if>
+        </div>
+    </template>
+    <script>
+        class asuSpotlight extends mpSlider {
+            static get is() {
+                return 'asu-spotlight'
+            }
+
+            static get properties() {
+
+                return {
+                    customProp: Boolean
+                }
+            }
+
+            constructor() {
+                super();
+            }
+
+            connectedCallback() {
+                super.connectedCallback();
+
+            }
+        }
+        customElements.define(asuSpotlight.is, asuSpotlight);
+    </script>
+</dom-module>

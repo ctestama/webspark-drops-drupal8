@@ -1,0 +1,241 @@
+<dom-module id="asu-spotlight-item-styles">
+    <template>
+        <style>
+
+            :root {
+                font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                background-color: #f9f9f9;
+                --primary-button-color: #8C1D40;
+                --primary-text-color: white;
+                --primary-button-hover-color: #d23153;
+                --secondary-button-color: #dbdbdb;
+                --secondary-text-color: #2a2a2a;
+                --secondary-button-hover-color: #f2f2f2;
+                --gold-button-color: #FFC627;
+                --gold-text-color: #2a2a2a;
+                --gold-button-hover-color: #ffd053;
+                --blue-button-color: #00A3E0;
+                --blue-text-color: white;
+                --blue-button-hover-color: #0aa9fc;
+            }
+
+            .btn {
+                -moz-user-select: none;
+                background-image: none;
+                border: 1px solid transparent;
+                border-radius: 0.25em;
+                cursor: pointer;
+                display: inline-block;
+                font-size: 1em;
+                font-weight: normal;
+                line-height: 1.44;
+                margin-bottom: 0;
+                padding: 0.375em 1.1875em;
+                text-align: center;
+                vertical-align: middle;
+                white-space: nowrap;
+            }
+            .btn:focus, .btn:active:focus, .btn.active:focus {
+                outline: 0 none;
+            }
+            .btn:hover, .btn:focus {
+                border: 1px solid transparent;
+                color: #505050;
+                text-decoration: none;
+            }
+            .btn:active, .btn.active {
+                background-image: none;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
+                outline: 0 none;
+            }
+            .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+                box-shadow: none;
+                cursor: not-allowed;
+                opacity: 0.65;
+                pointer-events: none;
+            }
+            .description {
+                color: #a6a6a6;
+                font-size: 16px;
+            }
+            .btn-primary {
+                background-color: var(--primary-button-color);
+                color: var(--primary-text-color);
+            }
+            .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+                background-color: var(--primary-button-hover-color);
+                color: var(--primary-text-color);
+            }
+            .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+                background-image: none;
+            }
+            .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled]:active, .btn-primary.active[disabled], fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
+                background-color: var(--primary-button-color);
+            }
+            .btn-primary .badge {
+                background-color: white;
+                color: var(--primary-button-color);
+            }
+            .btn-secondary {
+                background-color: var(--secondary-button-color);
+                color: var(--secondary-text-color);
+            }
+            .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .btn-secondary.dropdown-toggle {
+                background-color: var(--secondary-button-hover-color);
+                color: var(--secondary-text-color);
+            }
+            .btn-secondary:active, .btn-secondary.active, .open > .btn-secondary.dropdown-toggle {
+                background-image: none;
+            }
+            .btn-secondary.disabled, .btn-secondary.disabled:hover, .btn-secondary.disabled:focus, .btn-secondary.disabled:active, .btn-secondary.disabled.active, .btn-secondary[disabled], .btn-secondary[disabled]:hover, .btn-secondary[disabled]:focus, .btn-secondary[disabled]:active, .btn-secondary.active[disabled], fieldset[disabled] .btn-secondary, fieldset[disabled] .btn-secondary:hover, fieldset[disabled] .btn-secondary:focus, fieldset[disabled] .btn-secondary:active, fieldset[disabled] .btn-secondary.active {
+                background-color: var(--secondary-button-color);
+            }
+            .btn-secondary .badge {
+                background-color: white;
+                color: var(--secondary-button-color);
+            }
+            .btn-gold {
+                background-color: var(--gold-button-color);
+                color: var(--gold-text-color);
+            }
+            .btn-gold:hover, .btn-gold:focus, .btn-gold:active, .btn-gold.active, .open > .btn-gold.dropdown-toggle {
+                background-color: var(--gold-button-hover-color);
+                color: var(--gold-text-color);
+            }
+            .btn-gold:active, .btn-gold.active, .open > .btn-gold.dropdown-toggle {
+                background-image: none;
+            }
+            .btn-gold.disabled, .btn-gold.disabled:hover, .btn-gold.disabled:focus, .btn-gold.disabled:active, .btn-gold.disabled.active, .btn-gold[disabled], .btn-gold[disabled]:hover, .btn-gold[disabled]:focus, .btn-gold[disabled]:active, .btn-gold.active[disabled], fieldset[disabled] .btn-gold, fieldset[disabled] .btn-gold:hover, fieldset[disabled] .btn-gold:focus, fieldset[disabled] .btn-gold:active, fieldset[disabled] .btn-gold.active {
+                background-color: var(--gold-button-color);
+            }
+            .btn-gold .badge {
+                background-color: white;
+                color: var(--gold-button-color);
+            }
+            .btn-blue {
+                background-color: var(--blue-button-color);
+                color: var(--blue-text-color);
+            }
+            .btn-blue:hover, .btn-blue:focus, .btn-blue:active, .btn-blue.active, .open > .btn-blue.dropdown-toggle {
+                background-color: var(--blue-button-hover-color);
+                color: var(--blue-text-color);
+            }
+            .btn-blue:active, .btn-blue.active, .open > .btn-blue.dropdown-toggle {
+                background-image: none;
+            }
+            .btn-blue.disabled, .btn-blue.disabled:hover, .btn-blue.disabled:focus, .btn-blue.disabled:active, .btn-blue.disabled.active, .btn-blue[disabled], .btn-blue[disabled]:hover, .btn-blue[disabled]:focus, .btn-blue[disabled]:active, .btn-blue.active[disabled], fieldset[disabled] .btn-blue, fieldset[disabled] .btn-blue:hover, fieldset[disabled] .btn-blue:focus, fieldset[disabled] .btn-blue:active, fieldset[disabled] .btn-blue.active {
+                background-color: var(--blue-button-color);
+            }
+            .btn-blue .badge {
+                background-color: white;
+                color: var(--blue-button-color);
+            }
+
+            .blurbcontainer a {
+                text-decoration:none;
+            }
+            .blurbcontainer p {
+                margin: 0 0 24px 0;
+                padding: 0;
+                color: white;
+                font-size: 24px;
+                line-height: 24px;
+                font-weight: 900;
+                text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            }
+            .blurbcontainer h1,
+            .blurbcontainer h2 {
+                color: white;
+                font-size: 60px;
+                font-weight: 900;
+                line-height: 1;
+                margin: 0;
+                padding: 10px 0;
+                text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            }
+            .blurbcontainer {
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                height: auto;
+                padding: 0.5em;
+                width: 100%; /* Fix for IE9+; Capped below at 1170px */
+                max-width: 1170px;
+                background-color: transparent;
+            }
+            .blurbcontainer .btn {
+                display: inline;
+                margin-right: 20px;
+            }
+            .blurbcontainer .btn:last-child {
+                margin-right: 0;
+            }
+            .flexslider .flex-direction-nav a {
+                line-height: 2.5em;
+                border: none;
+            }
+            .blurbcontainer > .blurbshell {
+                position: absolute;
+            }
+            .blurbcontainer > .blurbshell.top-left {
+                top: 0.5em;
+                left: 0.5em;
+            }
+            .blurbcontainer > .blurbshell.top-center {
+                top: 0.5em;
+                left: 50%;
+                transform: translate(-50%, 0%);
+            }
+            .blurbcontainer > .blurbshell.top-right {
+                top: 0.5em;
+                right: 0.5em;
+            }
+            .blurbcontainer > .blurbshell.mid-left {
+                left: 0.5em;
+                top: 50%;
+                transform: translate(0%, -50%);
+            }
+            .blurbcontainer > .blurbshell.mid-center {
+                top: 50%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, -50%);
+            }
+            .blurbcontainer > .blurbshell.mid-right {
+                top: 50%;
+                right: 0.5em;
+                transform: translate(0%, -50%);
+            }
+            .blurbcontainer > .blurbshell.bottom-left {
+                bottom: 1.5em;
+                left: 0.5em;
+            }
+            .blurbcontainer > .blurbshell.bottom-center {
+                bottom: 1.5em;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, 0%);
+            }
+            .blurbcontainer > .blurbshell.bottom-right {
+                bottom: 1.5em;
+                right: 0.5em;
+            }
+            .blurbcontainer > .blurbshell.full-width {
+                max-width: 100%;
+            }
+            .blurbcontainer > .blurbshell.two-thirds {
+                max-width: 66%;
+            }
+            .blurbcontainer > .blurbshell.half-width {
+                max-width: 50%;
+            }
+            .blurbcontainer > .blurbshell.narrow-third {
+                max-width: 34%;
+            }
+        </style>
+    </template>
+</dom-module>

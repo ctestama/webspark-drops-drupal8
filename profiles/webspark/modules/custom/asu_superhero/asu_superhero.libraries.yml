@@ -1,0 +1,7 @@
+superhero.react.form:
+  version: 1.0
+  js:
+    js/asu_superhero.form.js: {}
+  dependencies:
+    - webspark/react
+    - webspark/react.dom

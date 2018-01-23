@@ -67,11 +67,12 @@ gulp.task('watch', function() {
 });
 
 // Static Server + Watch
+/*
 gulp.task('serve', ['css', 'fonts', 'watch'], function() {
   browserSync.init({
     proxy: config.proxy
   });
-});
+});*/
 
 // Run drush to clear the theme registry.
 gulp.task('drush', shell.task([
@@ -79,4 +80,4 @@ gulp.task('drush', shell.task([
 ]));
 
 // Default Task
-gulp.task('default', ['serve']);
+//gulp.task('default', ['serve']);

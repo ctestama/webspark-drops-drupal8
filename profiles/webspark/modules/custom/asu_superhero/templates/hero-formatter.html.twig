@@ -14,10 +14,27 @@
  */
 #}
 
-{% if url %}
-  <a href="{{ url }}">{{ image }}</a>
-    <p>{{ caption }}</p>
-{% else %}
-  {{ image }}
-  <p>{{ caption }}</p>
-{% endif %}
+{{ image }}
+
+<asu-spotlight-item spotlight-title="{{ title }}"
+                    title-link="link.com"
+                    image-alt="alt text"
+                    tagline="{{ description }}"
+
+                    {% if configs.buttonTitle1 %}
+                        button-one
+                        button-link-one="{{ configs.buttonUrl1 }}"
+                        button-text-one="{{ configs.buttonTitle1 }}"
+                    {% endif %}
+
+                    {% if configs.buttonTitle2 %}
+                        button-two
+                        button-link-two="{{ configs.buttonUrl2 }}"
+                        button-text-two="{{ configs.buttonTitle2 }}"
+                    {% endif %}
+
+                    button-color="btn-gold"
+                    text-position="top-center"
+                    overlay-text-width="full-width"
+                    image-link="images/img1.jpg">
+</asu-spotlight-item>

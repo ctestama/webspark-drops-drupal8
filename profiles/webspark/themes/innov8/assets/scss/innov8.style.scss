@@ -14,7 +14,6 @@
 
 // Global partials.
 // -----------------------------------------------------------------------------
-@import "radix/mixins";
 @import "base/mixins";
 @import "base/helpers";
 
@@ -80,7 +79,7 @@
 
 // Radix styles overrides and fixes.
 // -----------------------------------------------------------------------------
-@import "radix";
+@import "innov8";
 
 // Partials.
 // --------------------------------------------------

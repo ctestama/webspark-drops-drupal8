@@ -3,3 +3,7 @@ type: module
 description: Custom field to display ASU Spotlight image slider
 core: 8.x
 package: ASU
+version: 8.x-1.0-beta
+dependencies:
+  - webspark/react
+  - core/drupalSettings

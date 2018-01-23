@@ -1,0 +1,76 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="asu-spotlight-item-styles.html">
+<link rel="import" href="asu-spotlight-styles.html">
+
+    <dom-module id="asu-spotlight-item">
+        <template>
+            <style include="asu-spotlight-item-styles"></style>
+            <div class="blurbcontainer">
+                <div class="blurbshell {{textPosition}} {{overlayTextWidth}}">
+                    <a class="titlehref="[[titleLink]]">
+                        <h1>[[spotlightTitle]]</h1>
+                    </a>
+                    <p>[[tagline]]</p>
+                    <template is="dom-if" if="{{buttonOne}}">
+                        <a class$="btn {{buttonColor}} btn-block" href="[[buttonLinkOne]]">[[buttonTextOne]]</a>
+                    </template>
+                    <template is="dom-if" if="{{buttonTwo}}">
+                        <a class$="btn {{buttonColor}} btn-block" href="[[buttonLinkTwo]]">[[buttonTextTwo]]</a>
+                    </template>
+                </div>
+            </div>
+
+            <slot></slot>
+
+        </template>
+    <script>
+        class asuSpotlightItem extends Polymer.Element {
+            static get is() {
+                return 'asu-spotlight-item';
+            }
+
+            static get properties() {
+                return {
+                    spotlightTitle: String,
+
+                    titleLink: String,
+
+                    imageAlt: String,
+
+                    tagline: String,
+
+                    imageLink: String,
+
+                    buttonOne: Boolean,
+
+                    buttonLinkOne: String,
+
+                    buttonTextOne: String,
+
+                    buttonTwo: Boolean,
+
+                    buttonLinkTwo: String,
+
+                    buttonTextTwo: String,
+
+                    buttonColor: String,
+
+                    textPosition: String,
+
+                    overlayTextWidth: String
+                };
+            }
+
+            constructor() {
+                super();
+            }
+
+            connectedCallback() {
+                super.connectedCallback();
+            }
+
+        }
+
+        customElements.define(asuSpotlightItem.is, asuSpotlightItem);
+    </script>
+</dom-module>

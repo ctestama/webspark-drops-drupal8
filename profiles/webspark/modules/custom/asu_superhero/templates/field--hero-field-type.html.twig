@@ -1,0 +1,15 @@
+{%
+set classes = [
+bundle|clean_class ~ '__' ~ field_name_clean|clean_class
+]
+%}
+
+{% if multiple %}
+    {% for item in items %}
+        <div{{ item.attributes.addClass('slidecontainer') }}>{{ item.content }}</div>
+    {% endfor %}
+{% else %}
+    {% for item in items %}
+        <div{{ attributes.addClass('slidecontainer') }}>{{ item.content }}</div>
+    {% endfor %}
+{% endif %}

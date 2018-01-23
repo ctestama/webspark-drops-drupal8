@@ -9,6 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Cache\Cache;
 use Drupal\Core\Field\FieldItemInterface;
 use Drupal\image\Plugin\Field\FieldFormatter\ImageFormatter;
+use Drupal\Component\Serialization\Json;
 
 /**
  * Plugin implementation of the 'hero_formatter' formatter.
@@ -106,6 +107,11 @@ class HeroFormatter extends ImageFormatter {
       $item = $file->_referringItem;
       $item_attributes = $item->_attributes;
       unset($item->_attributes);
+      //kint($item, 'the item');
+
+      $configs = Json::decode($item->get('superhero_configs')->getValue());
+
+      //kint($configs, 'THE CONFIGS');
 
       $elements[$delta] = [
         '#theme' => 'hero_formatter',
@@ -117,6 +123,7 @@ class HeroFormatter extends ImageFormatter {
           'tags' => $cache_tags,
           'contexts' => $cache_contexts,
         ],
+        '#configs' => $configs
       ];
     }
 
@@ -135,7 +142,7 @@ class HeroFormatter extends ImageFormatter {
   protected function viewValue(FieldItemInterface $item) {
     // The text value has no text format assigned to it, so the user input
     // should equal the output, including newlines.
-    kint($item, 'THE ITEM IN KINT');
+    //kint($item, 'THE ITEM IN KINT');
   }
 
 }

@@ -15,8 +15,16 @@ function asu_superhero_theme() {
 
     // Theme functions in asu_superhero.field.inc.
     'hero_formatter' => [
-      'variables' => ['item' => NULL, 'item_attributes' => NULL, 'url' => NULL, 'image_style' => NULL],
-      'file' => 'asu_superhero.field.inc',
+      'variables' => ['item' => NULL, 'item_attributes' => NULL, 'url' => NULL, 'image_style' => NULL, 'configs' => NULL],
+      'file' => 'asu_superhero.theme.inc',
     ],
+    'node__asu_superhero' => [
+      'template' => 'node--asu-superhero',
+      'file' => 'asu_superhero.theme.inc',
+    ],
+    'field__hero_field_type' => [
+      'template' => 'field--hero-field-type',
+      'file' => 'asu_superhero.theme.inc',
+    ]
   ];
 }

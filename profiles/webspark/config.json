@@ -1,0 +1,36 @@
+{
+  "name": "Webspark",
+  "description": "Webspark Gulp tasks.",
+  "proxy" : "http://drupal.dev",
+  "bowerDir": "themes/innov8/bower_components",
+  "css": {
+    "file" : "themes/innov8/assets/scss/innov8.style.scss",
+    "src": [
+      "themes/innov8/assets/scss/**/*.scss"
+    ],
+    "dest": "themes/innov8/assets/css",
+    "includePaths": [
+      "themes/innov8/bower_components/bootstrap-sass/assets/stylesheets",
+      "themes/innov8/bower_components/font-awesome/scss",
+      "themes/innov8/assets/scss"
+    ]
+  },
+  "js": {
+    "file" : "innov8.script.js",
+    "src": [
+      "themes/innov8/assets/js/**/*.js"
+    ]
+  },
+  "images": {
+    "src": [
+      "themes/innov8/assets/images/**/*"
+    ],
+    "dest": "themes/innov8/assets/images/"
+  },
+  "fonts": {
+    "src": [
+      "themes/innov8/bower_components/font-awesome/fonts/**.*"
+    ],
+    "dest": "themes/innov8/assets/fonts/"
+  }
+}

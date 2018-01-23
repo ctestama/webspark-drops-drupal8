@@ -1,0 +1,20 @@
+// SASS partials import
+// -----------------------------------------------------------------------------
+@import "innov8/mixins";
+
+// Layouts
+// -----------------------------------------------------------------------------
+@import "innov8/layout";
+@import "innov8/maintenance";
+
+// Components.
+// -----------------------------------------------------------------------------
+@import "innov8/admin";
+@import "innov8/comment";
+@import "innov8/form";
+@import "innov8/modal";
+@import "innov8/nav";
+@import "innov8/node";
+@import "innov8/panel";
+@import "innov8/structure";
+@import "innov8/view";

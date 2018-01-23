@@ -48,10 +48,16 @@ class HeroFieldType extends ImageItem {
     $properties = parent::propertyDefinitions($field_definition);
 
     // Prevent early t() calls by using the TranslatableMarkup.
-    $properties['caption'] = DataDefinition::create('string')
+    $properties['description'] = DataDefinition::create('string')
       ->setLabel(new TranslatableMarkup('Image Caption'))
       ->setSetting('case_sensitive', TRUE)
       ->setRequired(FALSE);
+
+    // Prevent early t() calls by using the TranslatableMarkup.
+    $properties['superhero_configs'] = DataDefinition::create('string')
+      ->setLabel(new TranslatableMarkup('Field Configs'))
+      ->setSetting('case_sensitive', TRUE)
+      ->setRequired(True);
 
     return $properties;
   }
@@ -63,9 +69,16 @@ class HeroFieldType extends ImageItem {
 
     $schema = parent::schema($field_definition);
 
-    $schema['columns']['caption'] = [
-      'description' => "Caption for the image.",
+    $schema['columns']['description'] = [
+      'description' => "Description/tagline",
       'type' => 'text'
+    ];
+
+    $schema['columns']['superhero_configs'] = [
+      'description' => "Description/tagline",
+      'type' => 'text',
+      'size' => 'big',
+      'not null' => TRUE
     ];
 
     return $schema;
@@ -103,7 +116,7 @@ class HeroFieldType extends ImageItem {
     $values = parent::generateSampleValue($field_definition);
 
     $random = new Random();
-    $values['caption'] = $random->word(mt_rand(1, 500));
+    $values['description'] = $random->word(mt_rand(1, 500));
     return $values;
   }
 
