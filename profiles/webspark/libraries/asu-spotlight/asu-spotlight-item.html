@@ -2,27 +2,26 @@
 <link rel="import" href="asu-spotlight-item-styles.html">
 <link rel="import" href="asu-spotlight-styles.html">
 
-    <dom-module id="asu-spotlight-item">
-        <template>
-            <style include="asu-spotlight-item-styles"></style>
-            <div class="blurbcontainer">
-                <div class="blurbshell {{textPosition}} {{overlayTextWidth}}">
-                    <a class="titlehref="[[titleLink]]">
-                        <h1>[[spotlightTitle]]</h1>
-                    </a>
-                    <p>[[tagline]]</p>
-                    <template is="dom-if" if="{{buttonOne}}">
-                        <a class$="btn {{buttonColor}} btn-block" href="[[buttonLinkOne]]">[[buttonTextOne]]</a>
-                    </template>
-                    <template is="dom-if" if="{{buttonTwo}}">
-                        <a class$="btn {{buttonColor}} btn-block" href="[[buttonLinkTwo]]">[[buttonTextTwo]]</a>
-                    </template>
-                </div>
+<dom-module id="asu-spotlight-item">
+    <template>
+        <style include="asu-spotlight-item-styles"></style>
+        <div class="blurbcontainer">
+            <div class="blurbshell {{textPosition}} {{overlayTextWidth}}">
+                <a class="titlehref="[[titleLink]]">
+                    <h1>[[spotlightTitle]]</h1>
+                </a>
+                <p>[[tagline]]</p>
+                <template is="dom-if" if="{{buttonOne}}">
+                    <a class$="btn {{buttonColor}} btn-block" href="[[buttonLinkOne]]">[[buttonTextOne]]</a>
+                </template>
+                <template is="dom-if" if="{{buttonTwo}}">
+                    <a class$="btn {{buttonColor}} btn-block" href="[[buttonLinkTwo]]">[[buttonTextTwo]]</a>
+                </template>
             </div>
+        </div>
 
-            <slot></slot>
-
-        </template>
+        <slot></slot>
+    </template>
     <script>
         class asuSpotlightItem extends Polymer.Element {
             static get is() {

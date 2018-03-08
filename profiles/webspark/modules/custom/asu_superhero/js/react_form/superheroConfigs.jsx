@@ -39,7 +39,7 @@ class superheroConfigs extends React.Component {
                     <input
                         name="buttonTitle1"
                         type="textfield"
-                        checked={this.state.buttonTitle1}
+                        value={this.state.buttonTitle1}
                         onChange={this.handleInputChange} />
 
                 </label>
@@ -58,7 +58,7 @@ class superheroConfigs extends React.Component {
                     <input
                         name="buttonTitle2"
                         type="textfield"
-                        checked={this.state.buttonTitle2}
+                        value={this.state.buttonTitle2}
                         onChange={this.handleInputChange} />
 
                 </label>
